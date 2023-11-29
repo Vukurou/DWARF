@@ -253,6 +253,10 @@ PrefabInstance:
       value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
       propertyPath: m_TagString
       value: Platform
       objectReference: {fileID: 0}

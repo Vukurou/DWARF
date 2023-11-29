@@ -9,6 +9,8 @@ TagManager:
   - FallDetector
   - Platform
   - Dwarf
+  - Plattform
+  - Zwerg
   layers:
   - Default
   - TransparentFX

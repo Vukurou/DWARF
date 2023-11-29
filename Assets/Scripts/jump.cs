@@ -25,18 +25,18 @@ public class Jump : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        if (!isJumping && Input.GetKeyDown(KeyCode.W))
+        if (canControl && !isJumping && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
             rigidbody2D.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
         }
 
-        if (isAlive||canControl)
+        if (isAlive || canControl)
         {
             HandleMovement();
         }
-        
+
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
         spike.transform.position = new Vector2(transform.position.x, spike.transform.position.y);
     }
@@ -51,7 +51,7 @@ public class Jump : MonoBehaviour
     {
         float moveSpeed = 7f;
         float midAirControl = 2f;
-        if (Input.GetKey(KeyCode.D))
+        if (canControl && Input.GetKey(KeyCode.D))
         {
             if (!isJumping)
             {
@@ -75,16 +75,14 @@ public class Jump : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-    
-            if (collision.CompareTag("FallDetector") || collision.CompareTag("Spike"))
-            {
-                canControl = false;
 
-                Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);
-            }
-
-            if (collision.gameObject.CompareTag("Spike"))
-            {
+        if (collision.CompareTag("FallDetector") || collision.CompareTag("Spike"))
+        {
+            canControl = false;
+            Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);
+        }
+        else if (collision.gameObject.CompareTag("Spike"))
+        {
             // Set isAlive to false to stop movement
             isAlive = false;
 
@@ -93,7 +91,11 @@ public class Jump : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
             }
-        
-            }
+
+        }
+        else if (collision.tag == "Checkpoint")
+        {
+            spawnPoint = transform.position;
+        }
     }
 }
