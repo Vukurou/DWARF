@@ -7,8 +7,8 @@ public class Jump : MonoBehaviour
     private BoxCollider2D boxCollider2D;
     private bool isJumping = false;
     private Vector3 spawnPoint;
-    private readonly GameObject fallDetector;
-    private readonly GameObject spike;
+    //private readonly GameObject fallDetector;
+    //private readonly GameObject spike;
     private bool isAlive = true;
     private bool canControl = true;
 
@@ -30,6 +30,7 @@ public class Jump : MonoBehaviour
             float jumpVelocity = 20f;
             rigidbody2D.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
+            Debug.Log("Jumping");
         }
 
         if (isAlive || canControl)
@@ -37,8 +38,10 @@ public class Jump : MonoBehaviour
             HandleMovement();
         }
 
-        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
-        spike.transform.position = new Vector2(transform.position.x, spike.transform.position.y);
+        /*if (fallDetector) {
+            fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
+            spike.transform.position = new Vector2(transform.position.x, spike.transform.position.y);
+        }*/
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -76,7 +79,7 @@ public class Jump : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("FallDetector") || collision.CompareTag("Spike"))
+        if (collision.CompareTag("FallDetector"))
         {
             canControl = false;
             Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);

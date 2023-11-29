@@ -214,6 +214,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 829902926059707501, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+      propertyPath: m_TagString
+      value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845854817618911302, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845854817618911302, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.61
@@ -253,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833234567800640117, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1156,6 +1172,7 @@ Tilemap:
     e32: 0
     e33: 1
 --- !u!1001 &1570798049
+--- !u!1001 &1135144869
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1194,6 +1211,11 @@ PrefabInstance:
     - target: {fileID: 4578608233060852845, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.345
+      value: 14.701173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578608233060852845, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4578608233060852845, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1227,24 +1249,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4901841081473993893, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
-      propertyPath: m_GravityScale
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7006894264659633343, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
-      propertyPath: zwergPrefab
-      value: 
-      objectReference: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
     - target: {fileID: 7072207117341238401, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
       propertyPath: platformPrefab
       value: 
       objectReference: {fileID: 6392639464495303870, guid: 40d1a17cf656a9a4b8a69f30e6e1d839, type: 3}
     - target: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
       propertyPath: m_Name
-      value: Dwarf
-      objectReference: {fileID: 0}
-    - target: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
-      propertyPath: m_TagString
       value: Dwarf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1351,8 +1361,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 333450540}
-  - {fileID: 1570798049}
   - {fileID: 755544116}
+  - {fileID: 1135144869}
   - {fileID: 2063702888}
   - {fileID: 187648725}
   - {fileID: 239303024}
