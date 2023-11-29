@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DwarfKing
       objectReference: {fileID: 0}
+    - target: {fileID: 304922093049882275, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1225199622484968334, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 57.75
@@ -754,7 +758,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6761089578acc824a907bed4bd905d03, type: 3}
---- !u!1001 &1570798049
+--- !u!1001 &1537698662
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -762,17 +766,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3567311747719878407, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0964966
+      objectReference: {fileID: 0}
+    - target: {fileID: -3567311747719878407, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0160829
+      objectReference: {fileID: 0}
+    - target: {fileID: -3567311747719878407, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3567311747719878407, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.008041441
+      objectReference: {fileID: 0}
+    - target: {fileID: -3567311747719878407, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 893098609752299198, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4657605099139000861, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.17
+      value: 64.82225
       objectReference: {fileID: 0}
     - target: {fileID: 4657605099139000861, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.049999952
+      value: 0.0871163
       objectReference: {fileID: 0}
     - target: {fileID: 4657605099139000861, guid: 9a87e68a7f9fd78439599ec7b0e6b29d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -820,8 +844,8 @@ SceneRoots:
   - {fileID: 1305547200}
   - {fileID: 333450540}
   - {fileID: 1400200600}
+  - {fileID: 1537698662}
   - {fileID: 1052372224}
-  - {fileID: 1570798049}
   - {fileID: 232492564}
   - {fileID: 1139685639}
   - {fileID: 1034711834}

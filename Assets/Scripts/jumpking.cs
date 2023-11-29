@@ -3,80 +3,96 @@ using System.Collections.Generic;
 using UnityEngine;
 public class JumpKing : MonoBehaviour
 {
-    // [SerializeField] private GameObject robotPlayer;
-    private new Rigidbody2D rigidbody2D;
-    private BoxCollider2D boxCollider2D;
-    private bool isJumping = false;
-    private bool isAlive = true;
+    private Rigidbody2D rigidbody2DKing;
+    private BoxCollider2D boxCollider2DKing;
+    private bool isJumpingKing = false;
+    private Vector3 spawnPoint;
+    private bool isAliveKing = true;
+    private bool canControlKing = true;
+
+    // Reference to the Dwarf prefab
+    public GameObject dwarfPrefab;
+
     // Start is called before the first frame update
     private void Awake()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        rigidbody2DKing = GetComponent<Rigidbody2D>();
+        boxCollider2DKing = GetComponent<BoxCollider2D>();
+        spawnPoint = transform.position;
     }
     //Update is called once per frame
     void Update()
     {
-        if (!isJumping && Input.GetKeyDown(KeyCode.W))
+        if (canControlKing && !isJumpingKing && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
-            rigidbody2D.velocity = Vector2.up * jumpVelocity;
-            isJumping = true;
+            GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
+            isJumpingKing = true;
+            Debug.Log("Jumping");
         }
 
-        if (isAlive)
+        if (isAliveKing || canControlKing)
         {
-            HandleMovement();
+            HandleMovementKing();
         }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("Plattform"))
+        if (collision.gameObject.CompareTag("Platform"))
         {
-            isJumping = false;
+            isJumpingKing = false;
         }
     }
-    private void HandleMovement()
+    private void HandleMovementKing()
     {
         float moveSpeed = 7f;
         float midAirControl = 2f;
-        if (Input.GetKey(KeyCode.D))
+        if (canControlKing && Input.GetKey(KeyCode.D))
         {
-            if (!isJumping)
+            if (!isJumpingKing)
             {
-                rigidbody2D.velocity = new Vector2(+moveSpeed, rigidbody2D.velocity.y);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(+moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
             }
             else
             {
-                rigidbody2D.velocity += new Vector2(+moveSpeed * midAirControl * Time.deltaTime, 0);
-                rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, -moveSpeed, +moveSpeed), rigidbody2D.velocity.y);
+                GetComponent<Rigidbody2D>().velocity += new Vector2(+moveSpeed * midAirControl * Time.deltaTime, 0);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Clamp(GetComponent<Rigidbody2D>().velocity.x, -moveSpeed, +moveSpeed), GetComponent<Rigidbody2D>().velocity.y);
             }
         }
         else
         {
             // No keys pressed
-            if (!isJumping)
+            if (!isJumpingKing)
             {
-                rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
             }
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Check if the GameObject it collided with has the tag "Spike"
-        if (collision.gameObject.tag == "Spike")
-        {
-// Set isAlive to false to stop movement
-            isAlive = false;
 
-            // Additional logic to handle the GameObject being "not alive"
-            // For example, disabling Rigidbody dynamics:
-            Rigidbody rb = GetComponent<Rigidbody>();
-            if (rb != null)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("FallDetector"))
+        {
+            canControlKing = false;
+            //GAME OVER
+        }
+        else if (collision.gameObject.CompareTag("Spike"))
+        {
+            // Set isAlive to false to stop movement
+            isAliveKing = false;
+
+            if (TryGetComponent<Rigidbody>(out var rb))
             {
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
             }
+
         }
+        /*else if (collision.tag == "Checkpoint")
+        {
+            spawnPoint = transform.position;
+        }*/
     }
 }
