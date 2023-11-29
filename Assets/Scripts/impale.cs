@@ -24,7 +24,7 @@ public class Impale : MonoBehaviour
             transform.SetParent(other.transform);
 
             // Instantiate the Platform object at the current position
-            Instantiate(platformPrefab, transform.position, Quaternion.identity);
+            Instantiate(platformPrefab, other.transform.position, Quaternion.identity);
 
             // Destroy both the spike (parent) and the game object (this) after a delay
             Destroy(other.gameObject); // Destroy the spike
