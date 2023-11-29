@@ -10,9 +10,6 @@ public class JumpKing : MonoBehaviour
     private bool isAliveKing = true;
     private bool canControlKing = true;
 
-    // Reference to the Dwarf prefab
-    public GameObject dwarfPrefab;
-
     // Start is called before the first frame update
     private void Awake()
     {
@@ -23,15 +20,16 @@ public class JumpKing : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        bool onlyPlatforms = GameObject.FindGameObjectsWithTag("Spike").Length == 0;
+
         if (canControlKing && !isJumpingKing && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
             isJumpingKing = true;
-            Debug.Log("Jumping");
         }
 
-        if (isAliveKing || canControlKing)
+        if (isAliveKing || canControlKing && onlyPlatforms)
         {
             HandleMovementKing();
         }

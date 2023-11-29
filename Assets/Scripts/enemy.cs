@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D rigidbodyDwarf;
+    public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
+
+    public delegate void GameOverDelegate();
+    public static event GameOverDelegate OnGameOver;
     
     private void Awake()
     {
-        rigidbodyDwarf = GetComponent<Rigidbody2D>();
         spawnPoint = transform.position;
     }
     
@@ -19,8 +21,14 @@ public class Enemy : MonoBehaviour
         // Check if the object collided with has the tag "Dwarf"
         if (collision.collider.CompareTag("Zwerg"))
         {
+            Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);
             // Destroy the collided dwarf
             Destroy(collision.collider.gameObject);
+        }
+            else if (collision.collider.CompareTag("DwarfKing"))
+        {
+            // Trigger Game Over
+            OnGameOver?.Invoke();
         }
     }
 }

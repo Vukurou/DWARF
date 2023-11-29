@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa529a997fe604489f3034c789507b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dwarfPrefab: {fileID: 0}
+  dwarfPrefab: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
 --- !u!50 &-1404772137203560579
 Rigidbody2D:
   serializedVersion: 4

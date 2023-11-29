@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 7720844702358539680}
   - component: {fileID: 998271045190096063}
   - component: {fileID: 4208208264809439615}
-  - component: {fileID: 3838876155275394941}
   - component: {fileID: -6540870442075221031}
   - component: {fileID: -9191083891709778607}
+  - component: {fileID: -3821497529677394737}
   m_Layer: 0
   m_Name: DwarfKing
-  m_TagString: Zwerg
+  m_TagString: DwarfKing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,20 +151,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3838876155275394941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304922093049882275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 6392639464495303870, guid: 40d1a17cf656a9a4b8a69f30e6e1d839, type: 3}
-  dwarfPrefab: {fileID: 0}
 --- !u!114 &-6540870442075221031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,3 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6df69d43697b949b4cd6e611756820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3821497529677394737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304922093049882275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9878fdc033708e43ac57de0447b56c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 6392639464495303870, guid: 40d1a17cf656a9a4b8a69f30e6e1d839, type: 3}
