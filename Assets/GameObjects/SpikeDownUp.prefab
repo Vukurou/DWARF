@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7494120241481035494}
   - component: {fileID: 3565978123400168229}
   - component: {fileID: 732731556437542991}
-  - component: {fileID: 5524600307762495790}
+  - component: {fileID: 9043671195095310066}
   m_Layer: 0
   m_Name: SpikeDownUp
   m_TagString: Spike
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1
   speed: 2
---- !u!61 &5524600307762495790
-BoxCollider2D:
+--- !u!60 &9043671195095310066
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -219,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18134667}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -229,6 +229,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.6373067}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.16750255, y: 0.17549449}
+      - {x: -0.42893928, y: -0.3275742}
+      - {x: -0.4632066, y: -0.3955719}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.456931, y: -0.3771035}
+      - {x: 0.16539681, y: 0.17549449}
+  m_UseDelaunayMesh: 0

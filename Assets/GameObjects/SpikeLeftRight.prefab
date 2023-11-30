@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3273445212584226760}
   - component: {fileID: 4610308212971414430}
   - component: {fileID: -8291059240804474853}
-  - component: {fileID: 1373451442391404927}
+  - component: {fileID: 3465963516637401781}
   m_Layer: 0
   m_Name: SpikeLeftRight
   m_TagString: Spike
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1
   speed: 2
---- !u!61 &1373451442391404927
-BoxCollider2D:
+--- !u!60 &3465963516637401781
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -219,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17890576}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -229,6 +229,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.6421885}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.16061577, y: 0.1702746}
+      - {x: -0.4331342, y: -0.3263347}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.44696984, y: -0.34708655}
+      - {x: 0.16291927, y: 0.17027476}
+  m_UseDelaunayMesh: 0
