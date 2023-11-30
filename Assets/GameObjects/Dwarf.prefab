@@ -182,6 +182,7 @@ MonoBehaviour:
   dwarfPrefab: {fileID: 7981019187575151546}
   jumpSound: {fileID: 8300000, guid: 54bfbf15a5c2f9b47aaa558506d4ec03, type: 3}
   moveSound: {fileID: 8300000, guid: cf82c5634bef08e4eaa5bfb1ffc453fb, type: 3}
+  impaleSound: {fileID: 0}
 --- !u!114 &7624356637849261241
 MonoBehaviour:
   m_ObjectHideFlags: 0

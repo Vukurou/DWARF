@@ -16,11 +16,18 @@ public class Jump : MonoBehaviour
 
     public AudioClip jumpSound;
     public AudioClip moveSound;
+
+    public AudioClip impaleSound;
     private AudioSource jumpAudio;
     private AudioSource moveAudio;
+
+    private AudioSource impaleAudio;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
+
         rigidbody2D = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         spawnPoint = transform.position;
@@ -32,6 +39,10 @@ public class Jump : MonoBehaviour
         moveAudio = gameObject.AddComponent<AudioSource>();
         moveAudio.playOnAwake = false;
         moveAudio.clip = moveSound;
+
+        impaleAudio = gameObject.AddComponent<AudioSource>();
+        impaleAudio.playOnAwake = false;
+        impaleAudio.clip = moveSound;
     }
     //Update is called once per frame
     void Update()
@@ -51,6 +62,7 @@ public class Jump : MonoBehaviour
             HandleMovementAudio();
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform"))
@@ -68,7 +80,7 @@ public class Jump : MonoBehaviour
             {
                 isWalking = true;
             }
-            
+
             if (!isJumping)
             {
                 rigidbody2D.velocity = new Vector2(+moveSpeed, rigidbody2D.velocity.y);
@@ -90,10 +102,13 @@ public class Jump : MonoBehaviour
         }
     }
 
-    private void HandleMovementAudio() {
-        if(isWalking && !moveAudio.isPlaying) {
+    private void HandleMovementAudio()
+    {
+        if (isWalking && !moveAudio.isPlaying)
+        {
             moveAudio.Play();
-        } else if (!isWalking && moveAudio.isPlaying)
+        }
+        else if (!isWalking && moveAudio.isPlaying)
         {
             moveAudio.Stop();
         }
@@ -117,6 +132,8 @@ public class Jump : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
             }
+
+            impaleAudio.Play();
 
         }
         else if (collision.tag == "Checkpoint")
