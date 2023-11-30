@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SpikeMover : MonoBehaviour
 {
+    private Rigidbody2D rigidbodyspike;
     public float distance = 1.5f; // Distance to move left and right
-    public float speed = 0.5f; // Speed of the movement
+    public float speed = 200000f; // Speed of the movement
 
     private Vector3 startPosition;
     private bool movingRight = true;
@@ -13,17 +14,19 @@ public class SpikeMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rigidbodyspike = gameObject.GetComponent<Rigidbody2D>();
         startPosition = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        Debug.Log("isMoving");
         if (movingRight)
         {
             if (transform.position.x < startPosition.x + distance)
             {
-                transform.position += Vector3.right * speed * Time.deltaTime;
+                rigidbodyspike.velocity = Vector2.right * speed;
             }
             else
             {
@@ -34,7 +37,7 @@ public class SpikeMover : MonoBehaviour
         {
             if (transform.position.x > startPosition.x - distance)
             {
-                transform.position += Vector3.left * speed * Time.deltaTime;
+                rigidbodyspike.velocity = Vector2.left * speed;
             }
             else
             {

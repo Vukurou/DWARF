@@ -9,7 +9,7 @@ public class Impale : MonoBehaviour
     public GameObject platformPrefab;
     public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
-    
+
     private void Awake()
     {
         rigidbodyDwarf = GetComponent<Rigidbody2D>();
