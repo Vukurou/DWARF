@@ -123,85 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &92516048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
-  m_PrefabInstance: {fileID: 333450540}
-  m_PrefabAsset: {fileID: 0}
---- !u!19719996 &92516053
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 92516048}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
---- !u!1839735485 &92516054
-Tilemap:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 92516048}
-  m_Enabled: 1
-  m_Tiles: {}
-  m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
-  m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
-  m_TileOrientation: 0
-  m_TileOrientationMatrix:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
 --- !u!1001 &187648725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416,24 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
-    - target: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
-      propertyPath: m_TagString
-      value: Platform
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 92516054}
-    - targetCorrespondingSourceObject: {fileID: 8077495010178585448, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 92516053}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51606b449a6c99843baa5647c6a30447, type: 3}
 --- !u!1 &504338134
 GameObject:
@@ -1282,11 +1189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1225199622484968334, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.791912
+      value: -13.3
       objectReference: {fileID: 0}
     - target: {fileID: 1225199622484968334, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7748642
+      value: -2.76
       objectReference: {fileID: 0}
     - target: {fileID: 1225199622484968334, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -205,11 +205,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 732731556437542991, guid: 147888124f6c0464dad58c0560ac957f, type: 3}
       propertyPath: speed
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 732731556437542991, guid: 147888124f6c0464dad58c0560ac957f, type: 3}
       propertyPath: distance
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6283331347974989935, guid: 147888124f6c0464dad58c0560ac957f, type: 3}
       propertyPath: m_Size.x
@@ -282,8 +282,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7270744032028436539, guid: 147888124f6c0464dad58c0560ac957f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 648280235}
   m_SourcePrefab: {fileID: 100100000, guid: 147888124f6c0464dad58c0560ac957f, type: 3}
+--- !u!1 &648280234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7270744032028436539, guid: 147888124f6c0464dad58c0560ac957f, type: 3}
+  m_PrefabInstance: {fileID: 648280233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &648280235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648280234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 6392639464495303870, guid: ed59286e6826bd0429134fd0b014120d, type: 3}
+  dwarfPrefab: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
 --- !u!1 &666401667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,11 +1362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6494091536697355311, guid: 7d0c9c00cf850b3419fecdd71113a586, type: 3}
       propertyPath: speed
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6494091536697355311, guid: 7d0c9c00cf850b3419fecdd71113a586, type: 3}
       propertyPath: distance
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6995922296592612758, guid: 7d0c9c00cf850b3419fecdd71113a586, type: 3}
       propertyPath: m_LocalScale.x
@@ -1401,8 +1423,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7270744032028436539, guid: 7d0c9c00cf850b3419fecdd71113a586, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772521396}
   m_SourcePrefab: {fileID: 100100000, guid: 7d0c9c00cf850b3419fecdd71113a586, type: 3}
+--- !u!1 &1772521395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7270744032028436539, guid: 7d0c9c00cf850b3419fecdd71113a586, type: 3}
+  m_PrefabInstance: {fileID: 1772521394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772521396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772521395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 6392639464495303870, guid: d8cec9c9c91526e458d035bb4cbd7394, type: 3}
+  dwarfPrefab: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
 --- !u!1 &2142817535
 GameObject:
   m_ObjectHideFlags: 0
