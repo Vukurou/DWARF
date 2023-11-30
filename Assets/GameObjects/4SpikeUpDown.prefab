@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3565978123400168229}
   - component: {fileID: 6494091536697355311}
   - component: {fileID: 8132148058984150466}
-  - component: {fileID: 5150373153385580600}
+  - component: {fileID: 7503064853464740246}
   m_Layer: 0
-  m_Name: SpikeUpDown
+  m_Name: 4SpikeUpDown
   m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 7270744032028436539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.120003, y: 1.71, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalPosition: {x: 61.8686, y: 1.4576, z: 0}
+  m_LocalScale: {x: 0.7973252, y: 0.7973252, z: 0.7973252}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -239,7 +239,7 @@ PolygonCollider2D:
       - {x: 0.426526, y: -0.32397994}
       - {x: 0.16033116, y: 0.16937694}
   m_UseDelaunayMesh: 0
---- !u!114 &5150373153385580600
+--- !u!114 &7503064853464740246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,8 +248,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7270744032028436539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fcbe72e885d9e64eb7f145f5cd20a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 0}
-  dwarfPrefab: {fileID: 0}
+  platformPrefab: {fileID: 6392639464495303870, guid: 1682790dc04e01740afd5edf9343af61, type: 3}
+  dwarfPrefab: {fileID: 7981019187575151546, guid: 720561cfe564b494d918741384234c7d, type: 3}

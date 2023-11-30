@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: db647b8fd3331764db80b65136e417f3
+guid: e1a9ae969e52dae40bc0fc7342aa1202
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - platformPrefab: {instanceID: 0}
-  - dwarfPrefab: {instanceID: 0}
-  - impaleSound: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

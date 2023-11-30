@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 7624356637849261241}
   - component: {fileID: 1959565543130056683}
   - component: {fileID: -4960005213569091086}
-  - component: {fileID: 4867498285355019325}
+  - component: {fileID: -3515631493000887973}
   m_Layer: 0
-  m_Name: Dwarf
+  m_Name: 4Dwarf
   m_TagString: Zwerg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 7981019187575151546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.510002, y: 2.48, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: 59.3001, y: 2.2701, z: 0}
+  m_LocalScale: {x: 0.83036876, y: 0.83036876, z: 0.664295}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350f15cac602a964bbaaf742f792b811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: -2687615704785301608}
   dwarfPrefab: {fileID: 7981019187575151546}
   jumpSound: {fileID: 8300000, guid: 827c0a7e6e3306747a1128f9ace027b2, type: 3}
   moveSound: {fileID: 8300000, guid: cf82c5634bef08e4eaa5bfb1ffc453fb, type: 3}
@@ -374,10 +373,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &-2687615704785301608
-Animator:
-  serializedVersion: 5
---- !u!82 &4867498285355019325
+--- !u!82 &-3515631493000887973
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,18 +381,6 @@ AudioSource:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7981019187575151546}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c352832139f36944d99102c47c42bdd4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 94650619e556e844e92fa0958b577a83, type: 3}

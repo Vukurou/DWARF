@@ -17,13 +17,10 @@ public class Jump : MonoBehaviour
 
     public AudioClip jumpSound;
     public AudioClip moveSound;
-
-    public AudioClip impaleSound;
     private AudioSource jumpAudio;
     private AudioSource moveAudio;
-
-    private AudioSource impaleAudio;
-
+    public AudioClip screamSound;
+    private AudioSource screamAudio;
 
     // Start is called before the first frame update
     private void Awake()
@@ -41,9 +38,9 @@ public class Jump : MonoBehaviour
         moveAudio.playOnAwake = false;
         moveAudio.clip = moveSound;
 
-        impaleAudio = gameObject.AddComponent<AudioSource>();
-        impaleAudio.playOnAwake = false;
-        impaleAudio.clip = moveSound;
+        screamAudio = gameObject.AddComponent<AudioSource>();
+        screamAudio.playOnAwake = false;
+        screamAudio.clip = screamSound;
     }
     //Update is called once per frame
     void Update()
@@ -124,6 +121,7 @@ public class Jump : MonoBehaviour
 
         if (collision.CompareTag("FallDetector"))
         {
+            screamAudio.Play();
             canControl = false;
             Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);
         }
@@ -137,8 +135,6 @@ public class Jump : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
             }
-
-            impaleAudio.Play();
 
         }
         else if (collision.tag == "Checkpoint")
