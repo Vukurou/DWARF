@@ -65,6 +65,11 @@ public class JumpKing : MonoBehaviour
         float midAirControl = 2f;
         if (Input.GetKey(KeyCode.D))
         {
+            if(!isJumpingKing && !isWalkingKing)
+            {
+                isWalkingKing = true;
+            }
+            
             if (!isJumpingKing)
             {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(+moveSpeed, GetComponent<Rigidbody2D>().velocity.y);

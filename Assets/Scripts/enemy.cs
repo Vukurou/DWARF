@@ -9,9 +9,6 @@ public class Enemy : MonoBehaviour
 {
     public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
-
-    public delegate void GameOverDelegate();
-    public static event GameOverDelegate OnGameOver;
     
     private void Awake()
     {

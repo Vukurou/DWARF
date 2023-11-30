@@ -13,7 +13,6 @@ public class Impale : MonoBehaviour
     private void Awake()
     {
         rigidbodyDwarf = GetComponent<Rigidbody2D>();
-        //spawnPoint = transform.position;
         spawnPoint = GameObject.Find("Dwarf").transform.position;
     }
 
@@ -34,6 +33,7 @@ public class Impale : MonoBehaviour
             // Destroy both the spike (parent) and the game object (this) after a delay
             Destroy(other.gameObject); // Destroy the spike
             Destroy(gameObject); // Destroy this game object
+
         }
     }
 }

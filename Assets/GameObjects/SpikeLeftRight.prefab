@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4610308212971414430}
   - component: {fileID: -8291059240804474853}
   - component: {fileID: 3465963516637401781}
+  - component: {fileID: -5044103248606264096}
   m_Layer: 0
   m_Name: SpikeLeftRight
   m_TagString: Spike
@@ -238,3 +239,18 @@ PolygonCollider2D:
       - {x: 0.44696984, y: -0.34708655}
       - {x: 0.16291927, y: 0.17027476}
   m_UseDelaunayMesh: 0
+--- !u!114 &-5044103248606264096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046298662816546059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 0}
+  dwarfPrefab: {fileID: 0}
+  impaleSound: {fileID: 0}
