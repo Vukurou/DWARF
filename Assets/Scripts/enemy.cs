@@ -9,12 +9,15 @@ public class Enemy : MonoBehaviour
 {
     public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
-    
+    private Rigidbody2D rigidbody2D;
+
     private void Awake()
     {
-        spawnPoint = transform.position;
+        // spawnPoint = transform.position;
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        spawnPoint = GameObject.Find("Dwarf").transform.position;
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the object collided with has the tag "Dwarf"
@@ -24,7 +27,7 @@ public class Enemy : MonoBehaviour
             // Destroy the collided dwarf
             Destroy(collision.collider.gameObject);
         }
-            else if (collision.collider.CompareTag("DwarfKing"))
+        else if (collision.collider.CompareTag("DwarfKing"))
         {
             SceneManager.LoadScene("GameOver");
         }

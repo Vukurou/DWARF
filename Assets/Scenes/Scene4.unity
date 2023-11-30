@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7126260346238391370, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
       propertyPath: m_Name
-      value: kristall (1)
+      value: kristall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
