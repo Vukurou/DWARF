@@ -227,12 +227,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -4.7514005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.04
+      value: 28.92
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.23
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.z
@@ -639,7 +643,8 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 524458019, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6540870442075221031, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -875,7 +880,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dwarf
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6726884958559913104, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
