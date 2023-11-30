@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 public class JumpKing : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class JumpKing : MonoBehaviour
     private bool isJumpingKing = false;
     private Vector3 spawnPoint;
     private bool isAliveKing = true;
-    private bool canControlKing = true;
+
+    public GameObject dwarfKing;
 
     // Start is called before the first frame update
     private void Awake()
@@ -16,20 +18,28 @@ public class JumpKing : MonoBehaviour
         rigidbody2DKing = GetComponent<Rigidbody2D>();
         boxCollider2DKing = GetComponent<BoxCollider2D>();
         spawnPoint = transform.position;
+        gameObject.SetActive(false);
+        Debug.Log("JumpKing Awake");
     }
     //Update is called once per frame
     void Update()
     {
         bool onlyPlatforms = GameObject.FindGameObjectsWithTag("Spike").Length == 0;
+        Debug.Log("onlyPlatforms: " + onlyPlatforms);
 
-        if (canControlKing && !isJumpingKing && Input.GetKeyDown(KeyCode.W))
+        if (onlyPlatforms && dwarfKing != null && !dwarfKing.activeSelf)
+        {
+            dwarfKing.SetActive(true); // Reactivate DwarfKing when only platforms are present
+        }
+
+        if (!isJumpingKing && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
             isJumpingKing = true;
         }
 
-        if (isAliveKing || canControlKing && onlyPlatforms)
+        if (isAliveKing)
         {
             HandleMovementKing();
         }
@@ -46,7 +56,7 @@ public class JumpKing : MonoBehaviour
     {
         float moveSpeed = 7f;
         float midAirControl = 2f;
-        if (canControlKing && Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             if (!isJumpingKing)
             {
@@ -73,7 +83,6 @@ public class JumpKing : MonoBehaviour
 
         if (collision.CompareTag("FallDetector"))
         {
-            canControlKing = false;
             //GAME OVER
         }
         else if (collision.gameObject.CompareTag("Spike"))
@@ -88,9 +97,5 @@ public class JumpKing : MonoBehaviour
             }
 
         }
-        /*else if (collision.tag == "Checkpoint")
-        {
-            spawnPoint = transform.position;
-        }*/
     }
 }

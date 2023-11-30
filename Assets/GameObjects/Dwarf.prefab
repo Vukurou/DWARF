@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7445125158520357737}
   - component: {fileID: 4901841081473993893}
   - component: {fileID: 7072207117341238401}
-  - component: {fileID: 6726884958559913104}
   - component: {fileID: 7006894264659633343}
   m_Layer: 0
   m_Name: Dwarf
@@ -165,18 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 6392639464495303870, guid: 40d1a17cf656a9a4b8a69f30e6e1d839, type: 3}
   dwarfPrefab: {fileID: 7981019187575151546}
---- !u!114 &6726884958559913104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7981019187575151546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd42c1592bdbcb641879d193b4cee05e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7006894264659633343
 MonoBehaviour:
   m_ObjectHideFlags: 0
