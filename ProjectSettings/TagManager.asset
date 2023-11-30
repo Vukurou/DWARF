@@ -8,8 +8,6 @@ TagManager:
   - Checkpoint
   - FallDetector
   - Platform
-  - Dwarf
-  - Plattform
   - Zwerg
   - DwarfKing
   layers:

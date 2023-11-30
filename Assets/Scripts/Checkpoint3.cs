@@ -8,7 +8,7 @@ public class Checkpoint3 : MonoBehaviour
     // Bei Kollision neue Szene laden
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Zwerg"))
+        if (collision.CompareTag("DwarfKing"))
         {
             SceneManager.LoadScene("Scene4");
             Debug.Log("detected");

@@ -18,20 +18,10 @@ public class JumpKing : MonoBehaviour
         rigidbody2DKing = GetComponent<Rigidbody2D>();
         boxCollider2DKing = GetComponent<BoxCollider2D>();
         spawnPoint = transform.position;
-        gameObject.SetActive(false);
-        Debug.Log("JumpKing Awake");
     }
     //Update is called once per frame
     void Update()
     {
-        bool onlyPlatforms = GameObject.FindGameObjectsWithTag("Spike").Length == 0;
-        Debug.Log("onlyPlatforms: " + onlyPlatforms);
-
-        if (onlyPlatforms && dwarfKing != null && !dwarfKing.activeSelf)
-        {
-            dwarfKing.SetActive(true); // Reactivate DwarfKing when only platforms are present
-        }
-
         if (!isJumpingKing && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
@@ -96,6 +86,10 @@ public class JumpKing : MonoBehaviour
                 rb.isKinematic = true;
             }
 
+        }
+        else if (collision.tag == "Checkpoint")
+        {
+            spawnPoint = transform.position;
         }
     }
 }

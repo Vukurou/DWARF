@@ -7,8 +7,6 @@ public class Jump : MonoBehaviour
     private BoxCollider2D boxCollider2D;
     private bool isJumping = false;
     private Vector3 spawnPoint;
-    //private readonly GameObject fallDetector;
-    //private readonly GameObject spike;
     private bool isAlive = true;
     private bool canControl = true;
 
@@ -36,11 +34,6 @@ public class Jump : MonoBehaviour
         {
             HandleMovement();
         }
-
-        /*if (fallDetector) {
-            fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
-            spike.transform.position = new Vector2(transform.position.x, spike.transform.position.y);
-        }*/
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
