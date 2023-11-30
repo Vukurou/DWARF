@@ -1237,6 +1237,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5044103248606264096, guid: 6761089578acc824a907bed4bd905d03, type: 3}
+      propertyPath: dwarfPrefab
+      value: 
+      objectReference: {fileID: 7981019187575151546, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
+    - target: {fileID: -5044103248606264096, guid: 6761089578acc824a907bed4bd905d03, type: 3}
+      propertyPath: platformPrefab
+      value: 
+      objectReference: {fileID: 6392639464495303870, guid: 5627d182835e2964085648403794b0c0, type: 3}
     - target: {fileID: 787687175900630031, guid: 6761089578acc824a907bed4bd905d03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62.553

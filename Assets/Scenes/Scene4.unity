@@ -2365,9 +2365,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1649729616794320219, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 94.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649729616794320219, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.56
+      objectReference: {fileID: 0}
     - target: {fileID: 3999667002246847033, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5106134176582595311, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7808707597678526372, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
       propertyPath: m_Name
@@ -2697,21 +2709,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7149609094014793458, guid: f903aafabb4cfc7478419dbcb6c2ce50, type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 431646955394113869, guid: f903aafabb4cfc7478419dbcb6c2ce50, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.34057495
+      value: 0.4778562
       objectReference: {fileID: 0}
     - target: {fileID: 431646955394113869, guid: f903aafabb4cfc7478419dbcb6c2ce50, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 1.9922577
       objectReference: {fileID: 0}
     - target: {fileID: 431646955394113869, guid: f903aafabb4cfc7478419dbcb6c2ce50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 85.03
+      value: 85.0282
       objectReference: {fileID: 0}
     - target: {fileID: 431646955394113869, guid: f903aafabb4cfc7478419dbcb6c2ce50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.76
+      value: -1.7532
       objectReference: {fileID: 0}
     - target: {fileID: 431646955394113869, guid: f903aafabb4cfc7478419dbcb6c2ce50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2777,7 +2793,6 @@ SceneRoots:
   - {fileID: 2724213398780060190}
   - {fileID: 232492564}
   - {fileID: 1139685639}
-  - {fileID: 906573945}
   - {fileID: 2124160295}
   - {fileID: 1034711834}
   - {fileID: 624503444}
