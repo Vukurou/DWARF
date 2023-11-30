@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4530358462410292646}
   - component: {fileID: -3495980563823086148}
   - component: {fileID: 8112440905504660827}
+  - component: {fileID: 7471407940638639821}
   m_Layer: 0
   m_Name: EnemyMoving
   m_TagString: Untagged
@@ -145,3 +146,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7471407940638639821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555706419725374860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa529a997fe604489f3034c789507b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dwarfPrefab: {fileID: 0}

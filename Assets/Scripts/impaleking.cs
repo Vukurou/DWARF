@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Impale : MonoBehaviour
+public class ImpaleKing : MonoBehaviour
 {
     private Rigidbody2D rigidbodyDwarf;
     public GameObject platformPrefab;
-    public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
     
     private void Awake()
@@ -20,7 +19,6 @@ public class Impale : MonoBehaviour
     {
         if (other.GetComponent<Spike>())
         {
-            Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);
             rigidbodyDwarf.velocity = Vector2.zero;
             rigidbodyDwarf.bodyType = RigidbodyType2D.Static;
 

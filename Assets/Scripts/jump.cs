@@ -30,7 +30,6 @@ public class Jump : MonoBehaviour
             float jumpVelocity = 20f;
             rigidbody2D.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
-            Debug.Log("Jumping");
         }
 
         if (isAlive || canControl)
