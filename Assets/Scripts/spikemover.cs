@@ -6,7 +6,7 @@ public class SpikeMover : MonoBehaviour
 {
     private Rigidbody2D rigidbodyspike;
     public float distance = 1.5f; // Distance to move left and right
-    public float speed = 200000f; // Speed of the movement
+    public float speed = 0.5f; // Speed of the movement
 
     private Vector3 startPosition;
     private bool movingRight = true;
