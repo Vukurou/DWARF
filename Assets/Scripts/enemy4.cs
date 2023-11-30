@@ -5,14 +5,14 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class Enemy4 : MonoBehaviour
 {
     public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
     
     private void Awake()
     {
-        spawnPoint = GameObject.Find("Dwarf").transform.position;
+        spawnPoint = GameObject.Find("4Dwarf").transform.position;
     }
     
     private void OnCollisionEnter2D(Collision2D collision)

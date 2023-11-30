@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 958875266773103201}
   - component: {fileID: 7445125158520357737}
   - component: {fileID: 4901841081473993893}
-  - component: {fileID: 7072207117341238401}
   - component: {fileID: 7006894264659633343}
   - component: {fileID: 7624356637849261241}
   - component: {fileID: 1959565543130056683}
   - component: {fileID: -4960005213569091086}
+  - component: {fileID: 4867498285355019325}
   m_Layer: 0
   m_Name: Dwarf
   m_TagString: Zwerg
@@ -153,20 +153,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7072207117341238401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7981019187575151546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 6392639464495303870, guid: 40d1a17cf656a9a4b8a69f30e6e1d839, type: 3}
-  dwarfPrefab: {fileID: 7981019187575151546}
 --- !u!114 &7006894264659633343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,9 +166,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dwarfPrefab: {fileID: 7981019187575151546}
-  jumpSound: {fileID: 8300000, guid: 54bfbf15a5c2f9b47aaa558506d4ec03, type: 3}
+  jumpSound: {fileID: 8300000, guid: 827c0a7e6e3306747a1128f9ace027b2, type: 3}
   moveSound: {fileID: 8300000, guid: cf82c5634bef08e4eaa5bfb1ffc453fb, type: 3}
+<<<<<<< Updated upstream
   impaleSound: {fileID: 0}
+=======
+  screamSound: {fileID: 8300000, guid: 94650619e556e844e92fa0958b577a83, type: 3}
+>>>>>>> Stashed changes
 --- !u!114 &7624356637849261241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +195,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 54bfbf15a5c2f9b47aaa558506d4ec03, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 827c0a7e6e3306747a1128f9ace027b2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -306,6 +296,102 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &4867498285355019325
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981019187575151546}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 94650619e556e844e92fa0958b577a83, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
