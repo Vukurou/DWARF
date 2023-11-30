@@ -168,11 +168,7 @@ MonoBehaviour:
   dwarfPrefab: {fileID: 7981019187575151546}
   jumpSound: {fileID: 8300000, guid: 827c0a7e6e3306747a1128f9ace027b2, type: 3}
   moveSound: {fileID: 8300000, guid: cf82c5634bef08e4eaa5bfb1ffc453fb, type: 3}
-<<<<<<< Updated upstream
-  impaleSound: {fileID: 0}
-=======
   screamSound: {fileID: 8300000, guid: 94650619e556e844e92fa0958b577a83, type: 3}
->>>>>>> Stashed changes
 --- !u!114 &7624356637849261241
 MonoBehaviour:
   m_ObjectHideFlags: 0
