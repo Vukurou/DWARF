@@ -10,7 +10,7 @@ public class EndScene : MonoBehaviour
     {
         if (collision.CompareTag("DwarfKing"))
         {
-            SceneManager.LoadScene("EndGameScreen");
+            SceneManager.LoadScene("WinScreen");
             Debug.Log("detected");
         }
     }
