@@ -145,15 +145,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalScale.y
-      value: -1.4848126
+      value: -5.1469636
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.52
+      value: 50.84
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 7966328393753855098, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
       propertyPath: m_LocalPosition.z
@@ -190,8 +190,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 829902926059707501, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 232492566}
   m_SourcePrefab: {fileID: 100100000, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+--- !u!1 &232492565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 829902926059707501, guid: 7784f4c0d7b7a55469c43a851a940eda, type: 3}
+  m_PrefabInstance: {fileID: 232492564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &232492566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232492565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5370a2d646a3c4395b48e9a3fa5cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &248818828
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +421,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6540870442075221031, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1261,7 +1282,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dwarf
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6726884958559913104, guid: 4afe53086f539f34e83a11ee1a11d609, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
