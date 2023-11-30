@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dwarf_running
+  m_Name: crystal
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1677715354, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
+      value: {fileID: 21300000, guid: cbd8250d6d408c8458edfae87b817313, type: 3}
     - time: 0.083333336
-      value: {fileID: 1150212361, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
+      value: {fileID: 21300000, guid: 3bcc0cc7810ad4041a4d79b56c3c8d79, type: 3}
     - time: 0.16666667
-      value: {fileID: -2090454675, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
+      value: {fileID: 21300000, guid: 6b0603f2646eb684f9c0e6509a6c964d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1677715354, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
-    - {fileID: 1150212361, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
-    - {fileID: -2090454675, guid: c7ee1d41ef8e5104e85969f3fcd3040f, type: 3}
+    - {fileID: 21300000, guid: cbd8250d6d408c8458edfae87b817313, type: 3}
+    - {fileID: 21300000, guid: 3bcc0cc7810ad4041a4d79b56c3c8d79, type: 3}
+    - {fileID: 21300000, guid: 6b0603f2646eb684f9c0e6509a6c964d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
