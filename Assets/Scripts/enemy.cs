@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -27,8 +29,7 @@ public class Enemy : MonoBehaviour
         }
             else if (collision.collider.CompareTag("DwarfKing"))
         {
-            // Trigger Game Over
-            OnGameOver?.Invoke();
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

@@ -21,7 +21,6 @@ public class SpikeMover : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log("isMoving");
         if (movingRight)
         {
             if (transform.position.x < startPosition.x + distance)

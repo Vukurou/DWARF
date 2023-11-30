@@ -6,6 +6,7 @@ public class Jump : MonoBehaviour
     private new Rigidbody2D rigidbody2D;
     private BoxCollider2D boxCollider2D;
     private bool isJumping = false;
+    private bool isWalking = false;
     private Vector3 spawnPoint;
     private bool isAlive = true;
     private bool canControl = true;
@@ -13,12 +14,24 @@ public class Jump : MonoBehaviour
     // Reference to the Dwarf prefab
     public GameObject dwarfPrefab;
 
+    public AudioClip jumpSound;
+    public AudioClip moveSound;
+    private AudioSource jumpAudio;
+    private AudioSource moveAudio;
     // Start is called before the first frame update
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         spawnPoint = transform.position;
+
+        jumpAudio = gameObject.AddComponent<AudioSource>();
+        jumpAudio.playOnAwake = false;
+        jumpAudio.clip = jumpSound;
+
+        moveAudio = gameObject.AddComponent<AudioSource>();
+        moveAudio.playOnAwake = false;
+        moveAudio.clip = moveSound;
     }
     //Update is called once per frame
     void Update()
@@ -28,11 +41,14 @@ public class Jump : MonoBehaviour
             float jumpVelocity = 20f;
             rigidbody2D.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
+
+            jumpAudio.Play();
         }
 
         if (isAlive || canControl)
         {
             HandleMovement();
+            HandleMovementAudio();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,11 +76,21 @@ public class Jump : MonoBehaviour
         }
         else
         {
+            isWalking = false;
             // No keys pressed
             if (!isJumping)
             {
                 rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
             }
+        }
+    }
+
+    private void HandleMovementAudio() {
+        if(isWalking && !moveAudio.isPlaying) {
+            moveAudio.Play();
+        } else if (!isWalking && moveAudio.isPlaying)
+        {
+            moveAudio.Stop();
         }
     }
 

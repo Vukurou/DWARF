@@ -2,22 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class JumpKing : MonoBehaviour
 {
     private Rigidbody2D rigidbody2DKing;
     private BoxCollider2D boxCollider2DKing;
     private bool isJumpingKing = false;
+    private bool isWalkingKing = false;
     private Vector3 spawnPoint;
     private bool isAliveKing = true;
-
     public GameObject dwarfKing;
 
+    public AudioClip jumpSound;
+    public AudioClip moveSound;
+    private AudioSource jumpAudio;
+    private AudioSource moveAudio;
+    
     // Start is called before the first frame update
     private void Awake()
     {
         rigidbody2DKing = GetComponent<Rigidbody2D>();
         boxCollider2DKing = GetComponent<BoxCollider2D>();
         spawnPoint = transform.position;
+
+        jumpAudio = gameObject.AddComponent<AudioSource>();
+        jumpAudio.playOnAwake = false;
+        jumpAudio.clip = jumpSound;
+
+        moveAudio = gameObject.AddComponent<AudioSource>();
+        moveAudio.playOnAwake = false;
+        moveAudio.clip = moveSound;
     }
     //Update is called once per frame
     void Update()
@@ -27,11 +41,14 @@ public class JumpKing : MonoBehaviour
             float jumpVelocity = 20f;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
             isJumpingKing = true;
+
+            jumpAudio.Play();
         }
 
         if (isAliveKing)
         {
             HandleMovementKing();
+            HandleMovementAudioKing();
         }
 
     }
@@ -60,6 +77,7 @@ public class JumpKing : MonoBehaviour
         }
         else
         {
+            isWalkingKing = false;
             // No keys pressed
             if (!isJumpingKing)
             {
@@ -68,14 +86,23 @@ public class JumpKing : MonoBehaviour
         }
     }
 
+    private void HandleMovementAudioKing() {
+        if(isWalkingKing && !moveAudio.isPlaying) {
+            moveAudio.Play();
+        } else if (!isWalkingKing && moveAudio.isPlaying)
+        {
+            moveAudio.Stop();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.CompareTag("FallDetector"))
         {
-            //GAME OVER
+            SceneManager.LoadScene("GameOver");
         }
-        else if (collision.gameObject.CompareTag("Spike"))
+        /*else if (collision.gameObject.CompareTag("Spike"))
         {
             // Set isAlive to false to stop movement
             isAliveKing = false;
@@ -86,7 +113,7 @@ public class JumpKing : MonoBehaviour
                 rb.isKinematic = true;
             }
 
-        }
+        }*/
         else if (collision.tag == "Checkpoint")
         {
             spawnPoint = transform.position;
