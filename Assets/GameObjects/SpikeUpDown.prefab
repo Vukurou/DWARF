@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3565978123400168229}
   - component: {fileID: 6494091536697355311}
   - component: {fileID: 8132148058984150466}
+  - component: {fileID: -8353497334813063424}
   m_Layer: 0
   m_Name: SpikeUpDown
   m_TagString: Spike
@@ -238,3 +239,18 @@ PolygonCollider2D:
       - {x: 0.426526, y: -0.32397994}
       - {x: 0.16033116, y: 0.16937694}
   m_UseDelaunayMesh: 0
+--- !u!114 &-8353497334813063424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270744032028436539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db647b8fd3331764db80b65136e417f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 0}
+  dwarfPrefab: {fileID: 0}
+  impaleSound: {fileID: 0}

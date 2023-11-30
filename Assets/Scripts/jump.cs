@@ -64,6 +64,11 @@ public class Jump : MonoBehaviour
         float midAirControl = 2f;
         if (canControl && Input.GetKey(KeyCode.D))
         {
+            if (!isJumping && !isWalking)
+            {
+                isWalking = true;
+            }
+            
             if (!isJumping)
             {
                 rigidbody2D.velocity = new Vector2(+moveSpeed, rigidbody2D.velocity.y);
