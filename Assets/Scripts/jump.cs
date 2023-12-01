@@ -10,6 +10,7 @@ public class Jump : MonoBehaviour
     private Vector3 spawnPoint;
     private bool isAlive = true;
     private bool canControl = true;
+    public Animator animator;
 
     // Reference to the Dwarf prefab
     public GameObject dwarfPrefab;
@@ -44,11 +45,14 @@ public class Jump : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(rigidbody2D.velocity.x));
+
         if (canControl && !isJumping && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
             rigidbody2D.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
+            animator.SetBool("isJumping", true);
 
             jumpAudio.Play();
         }
@@ -60,11 +64,12 @@ public class Jump : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform"))
         {
             isJumping = false;
+            animator.SetBool("isJumping", false);
         }
     }
     private void HandleMovement()

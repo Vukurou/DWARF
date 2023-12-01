@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 62339342465493903}
   - component: {fileID: -5003037226939430453}
   - component: {fileID: -3672975840845909406}
+  - component: {fileID: 2861080483705418708}
   m_Layer: 0
   m_Name: DwarfKing
   m_TagString: DwarfKing
@@ -178,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dwarfKing: {fileID: 0}
+  animator: {fileID: 2861080483705418708}
   jumpSound: {fileID: 8300000, guid: 827c0a7e6e3306747a1128f9ace027b2, type: 3}
   moveSound: {fileID: 8300000, guid: cf82c5634bef08e4eaa5bfb1ffc453fb, type: 3}
 --- !u!82 &-5003037226939430453
@@ -372,3 +374,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &2861080483705418708
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304922093049882275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fed7caaef95eaf4d958eba41dac536b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

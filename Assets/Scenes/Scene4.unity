@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7270744032028436539, guid: c765b1af6e188704ea22cc705a51ac4d, type: 3}
       propertyPath: m_Name
-      value: 4SpikeUpDown
+      value: kristall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -681,6 +681,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &642427118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7981019187575151546, guid: 720561cfe564b494d918741384234c7d, type: 3}
+  m_PrefabInstance: {fileID: 2068388235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &642427128
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642427118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c352832139f36944d99102c47c42bdd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &666401667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7006894264659633343, guid: 720561cfe564b494d918741384234c7d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 642427128}
     - target: {fileID: 7981019187575151546, guid: 720561cfe564b494d918741384234c7d, type: 3}
       propertyPath: m_Name
       value: 4Dwarf
@@ -2428,7 +2458,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7981019187575151546, guid: 720561cfe564b494d918741384234c7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 642427128}
   m_SourcePrefab: {fileID: 100100000, guid: 720561cfe564b494d918741384234c7d, type: 3}
 --- !u!1001 &2118843300
 PrefabInstance:

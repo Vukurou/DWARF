@@ -1685,6 +1685,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 504338136}
     m_Modifications:
+    - target: {fileID: 62339342465493903, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1171870232}
     - target: {fileID: 304922093049882275, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
       propertyPath: m_Name
       value: DwarfKing
@@ -1733,7 +1737,10 @@ PrefabInstance:
     - {fileID: -6540870442075221031, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 304922093049882275, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1171870232}
   m_SourcePrefab: {fileID: 100100000, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
 --- !u!1 &1171870222 stripped
 GameObject:
@@ -1745,6 +1752,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1225199622484968334, guid: ffc4a19f8cb5efd42a44005f46c78f3d, type: 3}
   m_PrefabInstance: {fileID: 1171870221}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1171870232
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171870222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fed7caaef95eaf4d958eba41dac536b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2063702888
 PrefabInstance:
   m_ObjectHideFlags: 0
