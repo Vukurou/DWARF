@@ -13,11 +13,13 @@ public class JumpKing : MonoBehaviour
     private bool isAliveKing = true;
     public GameObject dwarfKing;
 
+    public Animator animator;
+
     public AudioClip jumpSound;
     public AudioClip moveSound;
     private AudioSource jumpAudio;
     private AudioSource moveAudio;
-    
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -36,11 +38,14 @@ public class JumpKing : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(rigidbody2DKing.velocity.x));
+
         if (!isJumpingKing && Input.GetKeyDown(KeyCode.W))
         {
             float jumpVelocity = 20f;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
             isJumpingKing = true;
+            animator.SetBool("isJumping", true);
 
             jumpAudio.Play();
         }
@@ -57,6 +62,7 @@ public class JumpKing : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isJumpingKing = false;
+            animator.SetBool("isJumping", false);
         }
     }
     private void HandleMovementKing()
@@ -65,11 +71,11 @@ public class JumpKing : MonoBehaviour
         float midAirControl = 2f;
         if (Input.GetKey(KeyCode.D))
         {
-            if(!isJumpingKing && !isWalkingKing)
+            if (!isJumpingKing && !isWalkingKing)
             {
                 isWalkingKing = true;
             }
-            
+
             if (!isJumpingKing)
             {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(+moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
@@ -91,10 +97,13 @@ public class JumpKing : MonoBehaviour
         }
     }
 
-    private void HandleMovementAudioKing() {
-        if(isWalkingKing && !moveAudio.isPlaying) {
+    private void HandleMovementAudioKing()
+    {
+        if (isWalkingKing && !moveAudio.isPlaying)
+        {
             moveAudio.Play();
-        } else if (!isWalkingKing && moveAudio.isPlaying)
+        }
+        else if (!isWalkingKing && moveAudio.isPlaying)
         {
             moveAudio.Stop();
         }
