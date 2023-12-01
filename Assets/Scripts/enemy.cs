@@ -8,10 +8,11 @@ public class Enemy : MonoBehaviour
 {
     public GameObject dwarfPrefab;
     private Vector3 spawnPoint;
-    private Rigidbody2D rigidbody2D;
+    //private Rigidbody2D rigidbody2DEnemy;
 
     private void Awake()
     {
+        //rigidbody2DEnemy = GetComponent<Rigidbody2D>();
         spawnPoint = GameObject.Find("Dwarf").transform.position;
     }
 
