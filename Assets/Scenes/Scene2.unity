@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1
   speed: 2
+  rigidbodyDwarf: {fileID: 0}
 --- !u!50 &94134387
 Rigidbody2D:
   serializedVersion: 4
@@ -1174,7 +1175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7126260346238391370, guid: 0228096873d663a489eb3ec98e07855c, type: 3}
       propertyPath: m_Name
-      value: kristall
+      value: crystal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

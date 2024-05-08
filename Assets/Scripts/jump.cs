@@ -124,6 +124,7 @@ public class Jump : MonoBehaviour
             screamAudio.Play();
             canControl = false;
             Instantiate(dwarfPrefab, spawnPoint, Quaternion.identity);
+            Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Spike"))
         {

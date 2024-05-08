@@ -8,6 +8,8 @@ public class SpikeMover : MonoBehaviour
     public float distance = 1.5f; // Distance to move left and right
     public float speed = 0.5f; // Speed of the movement
 
+    public Rigidbody2D rigidbodyDwarf = null;
+
     private Vector3 startPosition;
     private bool movingRight = true;
 
@@ -19,13 +21,14 @@ public class SpikeMover : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (movingRight)
         {
             if (transform.position.x < startPosition.x + distance)
             {
-                rigidbodyspike.velocity = Vector2.right * speed;
+                //neu
+                transform.position += Vector3.right * speed * Time.deltaTime;
             }
             else
             {
@@ -36,12 +39,29 @@ public class SpikeMover : MonoBehaviour
         {
             if (transform.position.x > startPosition.x - distance)
             {
-                rigidbodyspike.velocity = Vector2.left * speed;
+                //neu
+                transform.position += Vector3.left * speed * Time.deltaTime;
             }
             else
             {
                 movingRight = true;
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        float height = collision.collider.bounds.size.y;
+        //süsch wenns ned funktioniert duesch 0.1 chli wiiter uufe.
+        if(collision.transform.position.y - height > transform.position.y - 0.4f)
+        {
+            Debug.Log("collision.transform.position.y: " + collision.transform.position.y);
+            Debug.Log("transform.position.y: " + transform.position.y);
+            
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        collision.transform.SetParent(null);
     }
 }
